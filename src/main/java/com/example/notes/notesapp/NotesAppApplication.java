@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@EnableJpaRepositories("com.example.notes.entities") 
+@EnableJpaRepositories("com.example.notes.repo") 
 @EntityScan("com.example.notes.entities")
 @SpringBootApplication
 public class NotesAppApplication {
