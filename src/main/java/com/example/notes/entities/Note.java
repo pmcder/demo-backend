@@ -11,20 +11,23 @@ import javax.persistence.JoinColumn;
 @Entity
 @Table(name = "notes")
 public class Note {
+	
     @Id
+    @Column(name="note_id")
     private Integer note_id;
 
-    @Column(name = "body", nullable = false)
+    @Column(name = "body")
     private String body;
     
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category_id")
-    private Category category_id;
+    @Column(name = "category_id")
+    private Integer category_id;
 
-	public Note(String body, Category category_id) {
-		this.body = body;
-		this.category_id = category_id;
-	}
+	public Note(Integer note_id, String body, Integer category_id) {
+	super();
+	this.note_id = note_id;
+	this.body = body;
+	this.category_id = category_id;
+}
 
 	public Integer getNote_id() {
 		return note_id;
@@ -42,11 +45,11 @@ public class Note {
 		this.body = body;
 	}
 
-	public Category getCategory_id() {
-		return category_id;
+	public Integer getCategory_id() {
+		return this.category_id;
 	}
 
-	public void setCategory_id(Category category_id) {
+	public void setCategory_id(Integer category_id) {
 		this.category_id = category_id;
 	}
     

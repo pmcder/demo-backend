@@ -6,27 +6,19 @@ import javax.persistence.Column;
 import javax.persistence.Table;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.FetchType;
 
 
 @Entity
 @Table(name = "categories")
 public class Category {
+	
 	@Id
+	@Column(name="category_id")
     private Integer category_id;
 	
-	@Column(name = "name", nullable = false)
+	@Column(name = "name")
     private String name;
-
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "categories")
-    private List<Note> notes;
 	
-	Category(String name){
-		this.name = name;
-		
-	}
-
 	public Integer getCategory_id() {
 		return category_id;
 	}
