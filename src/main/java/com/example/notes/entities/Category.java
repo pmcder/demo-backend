@@ -27,7 +27,7 @@ public class Category {
 		
 	}
 
-	public long getCategory_id() {
+	public Integer getCategory_id() {
 		return category_id;
 	}
 

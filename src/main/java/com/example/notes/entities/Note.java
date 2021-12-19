@@ -26,7 +26,7 @@ public class Note {
 		this.category_id = category_id;
 	}
 
-	public long getNote_id() {
+	public Integer getNote_id() {
 		return note_id;
 	}
 
