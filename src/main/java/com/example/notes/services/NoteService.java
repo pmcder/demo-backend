@@ -3,6 +3,8 @@ package com.example.notes.services;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +13,7 @@ import com.example.notes.entities.Note;
 import com.example.notes.repo.CategoryRepository;
 import com.example.notes.repo.NoteRepository;
 
+
 @Service
 public class NoteService {
 	
@@ -18,6 +21,8 @@ public class NoteService {
 	private NoteRepository noteRepository;
 	
 	private CategoryRepository categoriesRepository;
+	
+	private static final Logger logger = LogManager.getLogger(NoteService.class);
 	
 	@Autowired
 	public NoteService(NoteRepository noteRepository, CategoryRepository categoriesRepository) {
