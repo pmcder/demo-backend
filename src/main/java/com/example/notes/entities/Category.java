@@ -19,6 +19,11 @@ public class Category {
 	@Column(name = "name")
     private String name;
 	
+	public Category() {
+		super();
+		
+	}
+
 	public Integer getCategory_id() {
 		return category_id;
 	}

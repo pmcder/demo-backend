@@ -22,12 +22,16 @@ public class Note {
     @Column(name = "category_id")
     private Integer category_id;
 
-	public Note(Integer note_id, String body, Integer category_id) {
-	super();
-	this.note_id = note_id;
-	this.body = body;
-	this.category_id = category_id;
-}
+
+	
+	
+
+	public Note() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
 
 	public Integer getNote_id() {
 		return note_id;
